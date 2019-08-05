@@ -2,10 +2,10 @@ import React from 'react'
 import {View,Button,Text,StyleSheet} from 'react-native'
 
 
-export default class Profile extends React.Component{
+export default class Modal extends React.Component{
     static navigationOptions = ({navigation})=>{
         return {
-            title:navigation.getParam("noParam","Elivs"),
+            title:navigation.getParam("noParam","Modal"),
             headerStyle:{
                 backgroundColor:'#f4511e'
             },
@@ -41,8 +41,8 @@ export default class Profile extends React.Component{
                 />
                 <Button
                     style={styles.margins}
-                    title="Go to MainModal"
-                    onPress={() => this.props.navigation.navigate('MainModal')}
+                    title="reset param"
+                    onPress={() => this.props.navigation.setParams({"noParam":"风眠"})}
                 />
           </View>
         );
