@@ -2,7 +2,14 @@ import React from 'react';
 import {View,Text,Button,StyleSheet} from 'react-native';
 export default class Home extends React.Component{
     static navigationOptions={
-        title:'Home'
+        title:'Home',
+        headerTintColor:'#FFFFFF',
+        headerStyle:{
+            backgroundColor: "#9ecfb8"
+        },
+        headerTintStyle:{
+            fontWeight:'blod'
+        }
     }
 
     render(){
