@@ -36,6 +36,14 @@ export default class Home extends React.Component{
                         title='go page FullScreen'
                     />
                 </View>
+                <View style={styles.item}>
+                    <Button 
+                        onPress={()=>{
+                            navigator.navigate('TabPage');
+                        }}
+                        title='go page TabPage'
+                    />
+                </View>
             </View>
         );
     }

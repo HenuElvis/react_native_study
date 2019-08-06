@@ -3,7 +3,7 @@ import Home from './main/Home'
 import ProductList from './productList/ProductList'
 import ProductDetails from './productDetail/ProductDetails'
 import FullScreen from './fullScreen/fullScreen'
-
+import TabPage from './tabPage/TabPage'
 
 const AppBarStack = createStackNavigator({
     List:{
@@ -15,7 +15,7 @@ const AppBarStack = createStackNavigator({
     Details:{
         screen:ProductDetails
     },
-  
+   
 },{
     initialRouteName:'Home',
     defaultNavigationOptions:{
@@ -36,6 +36,9 @@ const AppNavigator = createStackNavigator({
     FullScreen:{
         screen:FullScreen
     },
+    TabPage:{
+        screen:TabPage
+    }
 }, {
     initialRouteName:'AppBarStack',
     mode: 'modal',
