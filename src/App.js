@@ -2,11 +2,20 @@ import {createAppContainer,createStackNavigator}from 'react-navigation';
 import Home from './main/Home'
 import ProductList from './productList/ProductList'
 import ProductDetails from './productDetail/ProductDetails'
+import FullScreen from './fullScreen/fullScreen'
 
-const AppNavigator = createStackNavigator({
-    Home:Home,
-    Details:ProductDetails,
-    List:ProductList
+
+const AppBarStack = createStackNavigator({
+    List:{
+        screen:ProductList
+    },
+    Home:{
+        screen:Home
+    },
+    Details:{
+        screen:ProductDetails
+    },
+  
 },{
     initialRouteName:'Home',
     defaultNavigationOptions:{
@@ -19,6 +28,20 @@ const AppNavigator = createStackNavigator({
         }
     }
 });
+
+const AppNavigator = createStackNavigator({
+    AppBarStack:{
+        screen:AppBarStack
+    },
+    FullScreen:{
+        screen:FullScreen
+    },
+}, {
+    initialRouteName:'AppBarStack',
+    mode: 'modal',
+    headerMode: 'none',
+  }
+);
 
 const App = createAppContainer(AppNavigator);
 

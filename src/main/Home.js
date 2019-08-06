@@ -28,6 +28,14 @@ export default class Home extends React.Component{
                         title='go page details'
                     />
                 </View>
+                <View style={styles.item}>
+                    <Button 
+                        onPress={()=>{
+                            navigator.navigate('FullScreen');
+                        }}
+                        title='go page FullScreen'
+                    />
+                </View>
             </View>
         );
     }
