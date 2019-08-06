@@ -1,10 +1,12 @@
 import React from 'react'
-import {View ,Text} from 'react-native'
+import {View,Button ,Text} from 'react-native'
 
 export default class ProductDetails extends React.Component{
     static navigationOptions=({navigation})=>{
         return {
-            title:navigation.getParam("data",{key:'default product name'}).key
+            title:navigation.getParam("data",{key:'default product name'}).key,
+            headerTitle:<View><Text style ={{color:'white'}}>HeaderTitle</Text></View>,
+            headerRight:<View><Text style ={{color:'white'}}>HeaderRight</Text></View>
         };
     }
     render(){
@@ -19,6 +21,15 @@ export default class ProductDetails extends React.Component{
                         }});
                     }}
                 >parm:{item.key};点击更换title</Text>
+
+                <View style={{margin:50}}>
+                    <Button 
+                        title={'aaa'}
+                        onPress={()=>{
+                            alert('ceshi');
+                        }}
+                    ></Button>
+                </View>
             </View>
         );
     }
