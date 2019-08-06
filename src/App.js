@@ -7,6 +7,17 @@ const AppNavigator = createStackNavigator({
     Home:Home,
     Details:ProductDetails,
     List:ProductList
+},{
+    initialRouteName:'Home',
+    defaultNavigationOptions:{
+        headerStyle: {
+            backgroundColor: '#f4511e',
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+            fontWeight: 'bold',
+        }
+    }
 });
 
 const App = createAppContainer(AppNavigator);
