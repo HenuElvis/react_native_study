@@ -1,5 +1,5 @@
 import React from 'react';
-import {View,Text,Button,StyleSheet} from 'react-native';
+import {View,Text,Button,StyleSheet,ScrollView} from 'react-native';
 export default class Home extends React.Component{
     static navigationOptions={
         title:'Home',
@@ -17,33 +17,61 @@ export default class Home extends React.Component{
         const navigator = this.props.navigation;
         return (
             <View style={styles.container}>
-                <View style={styles.item}>
-                    <Text style={{textAlign:'center'}}>Page Home</Text>
-                </View>
-                <View style={styles.item}>
-                    <Button 
-                        onPress={()=>{
-                            navigator.navigate('List');
-                        }}
-                        title='go page details'
-                    />
-                </View>
-                <View style={styles.item}>
-                    <Button 
-                        onPress={()=>{
-                            navigator.navigate('FullScreen');
-                        }}
-                        title='go page FullScreen'
-                    />
-                </View>
-                <View style={styles.item}>
-                    <Button 
-                        onPress={()=>{
-                            navigator.navigate('TabPage');
-                        }}
-                        title='go page TabPage'
-                    />
-                </View>
+                <ScrollView>
+                    <View style={styles.item}>
+                        <Text style={{textAlign:'center'}}>Page Home</Text>
+                    </View>
+                    <View style={styles.item}>
+                        <Button 
+                            onPress={()=>{
+                                navigator.navigate('List');
+                            }}
+                            title='go page details'
+                        />
+                    </View>
+                    <View style={styles.item}>
+                        <Button 
+                            onPress={()=>{
+                                navigator.navigate('FullScreen');
+                            }}
+                            title='go page FullScreen'
+                        />
+                    </View>
+                    <View style={styles.item}>
+                        <Button 
+                            onPress={()=>{
+                                navigator.navigate('TabPage');
+                            }}
+                            title='go page TabPage'
+                        />
+                    </View>
+                    <View style={styles.item}>
+                        <Button 
+                            onPress={()=>{
+                                navigator.navigate('Todo');
+                            }}
+                            title='go page TODO'
+                        />
+                    </View>
+
+                    <View style={styles.item}>
+                        <Button 
+                            onPress={()=>{
+                                navigator.navigate('Bottom');
+                            }}
+                            title='go page Bottom'
+                        />
+                    </View>
+                    
+                    <View style={styles.item}>
+                        <Button 
+                            onPress={()=>{
+                                navigator.navigate('Top');
+                            }}
+                            title='go page TopBar'
+                        />
+                    </View>
+                </ScrollView>
             </View>
         );
     }
